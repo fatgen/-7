@@ -37,8 +37,20 @@ $prefectures = array(
 
   <form action="#">
 
-      <?php foreach ($prefectures as $key => $prefecture): ?>
-      <input type = checkbox value="<?php echo $key; ?>"><?php echo $prefecture . "<br>";?>
+<?php foreach ($prefectures as $key => $prefecture): ?>
+
+        for ($key=1; $key <=47  ; $key++)
+        {
+            if ($key % 5 == 0)
+          {
+            <input type = checkbox value="<?php echo $key; ?>"><?php echo $prefecture . "<br>";?>
+          }
+            else
+          {
+            <input type = checkbox value="<?php echo $key; ?>"><?php echo $prefecture ;?>
+          }
+        }
+
       <?php endforeach ?>
 
 
