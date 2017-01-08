@@ -25,19 +25,25 @@ $prefectures = array(
 </head>
   <body>
 
-    <h1>都道府県 選択</h1>
+  <h1>都道府県 選択</h1>
 
-     <form action="#">
+    <form action="#">
      <select name = "prefecture">
-<?php
-foreach ($prefectures as $key => $prefecture) {
-?>
-<option value="<?php print $key; ?>"><?php print $prefecture;?></option>
-<?php
-}
-?>
+      <?php foreach ($prefectures as $key => $prefecture): ?>
+      <option value="<?php echo $key; ?>"><?php echo $prefecture;?></option>
+      <?php endforeach ?>
+    </select>
+   </form>
+
+  <form action="#">
+
+      <?php foreach ($prefectures as $key => $prefecture): ?>
+      <input type = checkbox value="<?php echo $key; ?>"><?php echo $prefecture . "<br>";?>
+      <?php endforeach ?>
 
 
+    </select>
+   </form>
 
   </body>
 </html>
